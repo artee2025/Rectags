@@ -1,0 +1,29 @@
+text {
+  fill: black;
+  font-size: 10px;
+}
+
+body {
+  background-color: #7fdbff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.recttag rect {
+  fill: #439fc4;
+}
+.recttag:hover text {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: 14px;
+}
+.recttag:hover rect {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  fill: #91c7dc;
+}
+
+/*# sourceMappingURL=style.css.map */

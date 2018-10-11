@@ -1,0 +1,32 @@
+@mixin shift($property: all, $duration: 0.3s, $ease: linear) {
+  -webkit-transition: $property $duration $ease;
+  -moz-transition: $property $duration $ease;
+  -o-transition: $property $duration $ease;
+  transition: $property $duration $ease;
+}
+
+text {
+  fill: black;
+  font-size: 10px;
+}
+body {
+  background-color: rgb(127, 219, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+$primary-color: rgb(67, 159, 196);
+.recttag {
+  rect {
+    fill: $primary-color;
+  }
+
+  &:hover {
+    text {
+      @include shift();
+      font-size: 14px;
+    }
+    rect {
+      @include shift();
+      fill: lighten($primary-color, 20%);
+    }
+  }
+}
