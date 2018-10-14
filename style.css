@@ -1,29 +1,32 @@
 text {
   fill: black;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 body {
-  background-color: #7fdbff;
+  background-color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .recttag rect {
-  fill: #439fc4;
+  rx: 2px;
+  ry: 2px;
+}
+.recttag:hover {
+  cursor: pointer;
 }
 .recttag:hover text {
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  font-size: 14px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  font-size: 14.4px;
 }
 .recttag:hover rect {
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  fill: #91c7dc;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 
 /*# sourceMappingURL=style.css.map */

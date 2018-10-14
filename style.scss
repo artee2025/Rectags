@@ -1,32 +1,37 @@
-@mixin shift($property: all, $duration: 0.3s, $ease: linear) {
+@mixin shift($property: all, $duration: 0.1s, $ease: linear) {
   -webkit-transition: $property $duration $ease;
   -moz-transition: $property $duration $ease;
   -o-transition: $property $duration $ease;
   transition: $property $duration $ease;
 }
 
+$text-size: 12px;
 text {
-  fill: black;
-  font-size: 10px;
+  fill: rgb(0, 0, 0);
+  font-size: $text-size;
 }
 body {
-  background-color: rgb(127, 219, 255);
+  background-color: rgb(255, 255, 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-$primary-color: rgb(67, 159, 196);
+$primary-color: rgb(86, 146, 196);
 .recttag {
   rect {
-    fill: $primary-color;
+    //fill: $primary-color;
+    rx: 2px;
+    ry: 2px;
   }
-
   &:hover {
+    cursor: pointer;
     text {
       @include shift();
-      font-size: 14px;
+      font-size: $text-size * 1.2;
     }
     rect {
       @include shift();
-      fill: lighten($primary-color, 20%);
+      //fill: darken($primary-color, 20%);
+      // rx: 10px;
+      // ry: 10px;
     }
   }
 }
