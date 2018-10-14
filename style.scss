@@ -4,34 +4,40 @@
   -o-transition: $property $duration $ease;
   transition: $property $duration $ease;
 }
-
 $text-size: 12px;
 text {
   fill: rgb(0, 0, 0);
   font-size: $text-size;
+  font-family: 'YS Text','Helvetica Neue',Arial,sans-serif;
 }
 body {
   background-color: rgb(255, 255, 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-$primary-color: rgb(86, 146, 196);
+$primary-color: rgb(221, 221, 221);
 .recttag {
   rect {
-    //fill: $primary-color;
-    rx: 2px;
-    ry: 2px;
+    fill: $primary-color;
+    rx: 3px;
+    ry: 3px;
   }
   &:hover {
     cursor: pointer;
     text {
       @include shift();
-      font-size: $text-size * 1.2;
+      fill: white;
+      //font-size: $text-size * 1.2;
     }
     rect {
       @include shift();
-      //fill: darken($primary-color, 20%);
+      // fill: darken($primary-color, 20%);
+      fill: black;
       // rx: 10px;
       // ry: 10px;
     }
   }
+}
+.sandbox {
+  width: 600px;
+  height: 300px;
 }
