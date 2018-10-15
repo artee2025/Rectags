@@ -1,18 +1,23 @@
 $(function() {
   var getdata = d3.json("data.php");
-  var w = d3.select(".sandbox").node().getBoundingClientRect().width,
-    h =  d3.select(".sandbox").node().getBoundingClientRect().height;
+  var w = d3
+      .select(".sandbox")
+      .node()
+      .getBoundingClientRect().width,
+    h = d3
+      .select(".sandbox")
+      .node()
+      .getBoundingClientRect().height;
   var svg = d3
     .select(".sandbox")
     .append("svg")
     .attr("width", w)
     .attr("height", h);
-  let draw = data => {
+  let draw = function(data) {
     var tm = d3
       .treemap()
       .size([w, h])
       .padding(1);
-
     var nodes = d3.hierarchy(data).sum(function(d) {
       return d.size;
     });
@@ -36,17 +41,11 @@ $(function() {
 
     var ts = ns
       .append("text")
-      .attr("x", function(d) {
-        return (d.x1 - d.x0) / 2;
-      })
-      .attr("y", function(d) {
-        return (d.y1 - d.y0) / 2;
-      })
+      .attr("x", d => (d.x1 - d.x0) / 2)
+      .attr("y", d => (d.y1 - d.y0) / 2)
       .attr("text-anchor", "middle")
       .attr("dy", "5")
-      .text(function(d) {
-        return d.data.name;
-      });
+      .text(d => (d.depth < 1 ? "" : d.data.name));
   };
   let error = err => {
     console.log(err);

@@ -18,23 +18,23 @@ body {
   cursor: pointer;
 }
 .recttag:hover text {
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   fill: white;
 }
 .recttag:hover rect {
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   fill: black;
 }
 
 .sandbox {
-  width: 600px;
-  height: 300px;
+  width: 200px;
+  height: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */

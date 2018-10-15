@@ -1,4 +1,4 @@
-@mixin shift($property: all, $duration: 0.1s, $ease: linear) {
+@mixin shift($property: all, $duration: 0.3s, $ease: linear) {
   -webkit-transition: $property $duration $ease;
   -moz-transition: $property $duration $ease;
   -o-transition: $property $duration $ease;
@@ -38,6 +38,6 @@ $primary-color: rgb(221, 221, 221);
   }
 }
 .sandbox {
-  width: 600px;
-  height: 300px;
+  width: 200px;
+  height: 500px;
 }
