@@ -2,3 +2,43 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+ text {
+    fill: black;
+    font-size: 12px;
+    font-family: "YS Text", "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .recttag rect {
+    fill: #dddddd;
+    rx: 3px;
+    ry: 3px;
+  }
+  .recttag:hover {
+    cursor: pointer;
+  }
+  .recttag:hover text {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    fill: white;
+  }
+  .recttag:hover rect {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    fill: black;
+  }
+  
+  .sandbox {
+    width: 100%;
+    height: 200px;
+  }
+  

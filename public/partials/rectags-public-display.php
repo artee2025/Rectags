@@ -14,5 +14,3 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
-
-<h2>Testing html plugin</h2>

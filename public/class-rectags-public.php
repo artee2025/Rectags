@@ -54,16 +54,7 @@ class Rectags_Public {
 
 	}
 	public function do_cloud(){
-		$tags = get_tags();
-		$html = '<div class="post_tags">';
-		foreach ( $tags as $tag ) {
-			$tag_link = get_tag_link( $tag->term_id );
-					
-			$html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
-			$html .= "{$tag->name}</a></br>";
-		}
-		$html .= '</div>';
-		echo $html;
+		echo '<div class="sandbox"></div>';
 	}
 	/**
 	 * Register the stylesheets for the public-facing side of the site.
@@ -108,7 +99,10 @@ class Rectags_Public {
 		 */
 
 		wp_enqueue_script( $this->rectags, plugin_dir_url( __FILE__ ) . 'js/rectags-public.js', array( 'jquery' ), $this->version, false );
-
+		wp_enqueue_script( 'd3', plugin_dir_url( __FILE__ ) . 'js/d3.min.js', array($this->rectags), $this->version, false );
+		wp_localize_script('d3', 'd3', array(
+			'pluginsUrl' => plugin_dir_url( __FILE__ ),
+		));
 	}
 
 }
