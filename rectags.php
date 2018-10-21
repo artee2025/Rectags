@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       RecTags
  * Plugin URI:        http://artee.io/pr/rectags/
- * Description:       Tab cloud in the form of rectangles
+ * Description:       Tags cloud in the form of rectangles
  * Version:           1.0.0
  * Author:            Artee
  * Author URI:        http://artee.io/
@@ -75,7 +75,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-rectags.php';
  */
 function run_rectags() {
 
-	$plugin = new Plugin_Name();
+	$plugin = new Rectags();
 	$plugin->run();
 
 }

@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Rectags
+ * @subpackage Rectags/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Rectags
+ * @subpackage Rectags/includes
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name {
+class Rectags {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
