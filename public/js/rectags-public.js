@@ -1,6 +1,6 @@
 (function( $ ) {
 	'use strict';
-	alert('Test plugin JS');
+	console.log('Test plugin JS');
 	/**
 	 * All of the code for your public-facing JavaScript source
 	 * should reside in this file.

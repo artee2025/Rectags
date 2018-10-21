@@ -53,7 +53,18 @@ class Rectags_Public {
 		$this->version = $version;
 
 	}
-
+	public function do_cloud(){
+		$tags = get_tags();
+		$html = '<div class="post_tags">';
+		foreach ( $tags as $tag ) {
+			$tag_link = get_tag_link( $tag->term_id );
+					
+			$html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
+			$html .= "{$tag->name}</a></br>";
+		}
+		$html .= '</div>';
+		echo $html;
+	}
 	/**
 	 * Register the stylesheets for the public-facing side of the site.
 	 *
