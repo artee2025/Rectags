@@ -1,6 +1,5 @@
 (function( $ ) {
 	'use strict';
-	console.log('Test plugin JS');
 	/**
 	 * All of the code for your public-facing JavaScript source
 	 * should reside in this file.
@@ -30,7 +29,7 @@
 	 */
 
 	$(function() {
-		var getdata = d3.json(d3.pluginsUrl+"data.php");
+		// var getdata = d3.json(d3.pluginsUrl+"data.php");
 		var w = d3
 			.select(".sandbox")
 			.node()
@@ -45,6 +44,7 @@
 		  .attr("width", w)
 		  .attr("height", h);
 		let draw = function(data) {
+			console.log('draw:');
 		  var tm = d3
 			.treemap()
 			.size([w, h])
@@ -78,10 +78,11 @@
 			.attr("dy", "5")
 			.text(d => (d.depth < 1 ? "" : d.data.name));
 		};
-		let error = err => {
-		  console.log(err);
-		};
-		getdata.then(draw, error);
+		// let error = err => {
+		//   console.log(err);
+		// };
+		// getdata.then(draw, error);
+		draw(JSON.parse(d3.dataJSON));
 	  });
 
 })( jQuery );
