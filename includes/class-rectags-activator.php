@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
+ * @link       http://artee.io
  * @since      1.0.0
  *
  * @package    Rectags
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Rectags
  * @subpackage Rectags/includes
- * @author     Your Name <email@example.com>
+ * @author     Artee <artee2025@gmail.com>
  */
 class Rectags_Activator {
 

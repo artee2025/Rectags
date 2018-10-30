@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://example.com
+ * @link       http://artee.io
  * @since      1.0.0
  *
  * @package    Rectags
@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Rectags
  * @subpackage Rectags/includes
- * @author     Your Name <email@example.com>
+ * @author     Artee <artee2025@gmail.com>
  */
 class Rectags {
 

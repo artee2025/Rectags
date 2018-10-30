@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       http://artee.io
  * @since      1.0.0
  *
  * @package    Rectags
@@ -19,7 +19,7 @@
  *
  * @package    Rectags
  * @subpackage Rectags/includes
- * @author     Your Name <email@example.com>
+ * @author     Artee <artee2025@gmail.com>
  */
 class Rectags_Loader {
 
