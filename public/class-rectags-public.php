@@ -125,7 +125,9 @@ class Rectags_Public {
 		
 		$data = ['name' => 'tagcloud',
 			'children' => []];
-		$tags = get_the_tags();
+		$tags = get_tags();
+
+		var_dump($tags);
 		if (is_array($tags)) {
 			foreach ($tags as $tag) {
 				array_push($data['children'], ['name' => $tag->name . '(' . $tag->count . ')', 'size' => $tag->count]);
