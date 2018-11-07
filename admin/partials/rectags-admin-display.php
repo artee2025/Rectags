@@ -16,7 +16,10 @@
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
 <div class="wrap">
-<h1>Rectags setting</h1>
-<form method="post" action="options.php">
-Test
-</form>
+<h1>Plugin "Rectags" setting</h1>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="submit" value="SAVE">
+</div>

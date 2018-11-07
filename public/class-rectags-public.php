@@ -54,24 +54,6 @@ class Rectags_Public {
 
 	}
 	public function do_cloud(){
-		// $data = ['name' => 'tagcloud',
-		// 'children' => [['name' => 'Tag 1', 'size' => 15],
-		// 	['name' => 'Jeff', 'size' => 3],
-		// 	['name' => 'Tag 3', 'size' => 7],
-		// 	['name' => 'Tag 4', 'size' => 9],
-		// 	['name' => 'Tag 5', 'size' => 12],
-		// 	['name' => 'Tag 6', 'size' => 7],
-		// 	['name' => 'Longhorn', 'size' => 14],
-		// 	['name' => 'Tag 8', 'size' => 5],
-		// 	['name' => 'Boo', 'size' => 15],
-		// 	['name' => 'Vooo', 'size' => 20],
-		// 	['name' => 'Gooo', 'size' => 1],
-		// 	['name' => 'Bang', 'size' => 6],
-		// 	['name' => 'Yoo', 'size' => 20],
-		// ]];
-		// $fp = fopen(plugin_dir_url( __FILE__ ).'js/results.json', 'w');
-		// fwrite($fp, json_encode($data));
-		// fclose($fp);
 		echo '<div class="sandbox"></div>';
 	}
 	
@@ -127,7 +109,7 @@ class Rectags_Public {
 			'children' => []];
 		$tags = get_tags();
 
-		var_dump($tags);
+		// var_dump($tags);
 		if (is_array($tags)) {
 			foreach ($tags as $tag) {
 				array_push($data['children'], ['name' => $tag->name . '(' . $tag->count . ')', 'size' => $tag->count]);
