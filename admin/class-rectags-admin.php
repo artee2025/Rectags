@@ -20,7 +20,19 @@
  * @subpackage Rectags/admin
  * @author     Artee <artee2025@gmail.com>
  */
+
+
+
+
 class Rectags_Admin {
+	/**
+	 * The options name to be used in this plugin
+	 *
+	 * @since  	1.0.0
+	 * @access 	private
+	 * @var  	string 		$option_name 	Option name of this plugin
+	 */
+	private $option_name = 'rectags';
 
 	/**
 	 * The ID of this plugin.
@@ -112,15 +124,76 @@ class Rectags_Admin {
 	}
 
 	public function add_action_links( $links ) {
-		$settings_link = array(
-			'<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">' . __('Settings', $this->plugin_name) . '</a>',
-		);
-		return array_merge(" $settings_link, $links ");
+		// $settings_link = array(
+		// 	'<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">' . __('Settings', $this->plugin_name) . '</a>',
+		// );
+		// return array_merge($settings_link, $links);
+		return $links;
 	}
 
 
 	public function display_options_page() {
 		include_once 'partials/rectags-admin-display.php';
+	}
+
+	public function register_setting(){
+		add_settings_section(
+			$this->option_name . '_general',
+			__( 'General', 'rectags' ),
+			array( $this, $this->option_name . '_general_cb' ),
+			$this->rectags
+		);
+
+		add_settings_field(
+			$this->option_name . '_position',
+			__( 'Text position', 'rectags' ),
+			array( $this, $this->option_name . '_position_cb' ),
+			$this->rectags,
+			$this->option_name . '_general',
+			array( 'label_for' => $this->option_name . '_position' )
+		);
+
+		add_settings_field(
+			$this->option_name . '_day',
+			__( 'Post is outdated after', 'rectags' ),
+			array( $this, $this->option_name . '_day_cb' ),
+			$this->rectags,
+			$this->option_name . '_general',
+			array( 'label_for' => $this->option_name . '_day' )
+		);
+
+		register_setting( $this->rectags, $this->option_name . '_position', array( $this, $this->option_name . '_sanitize_position' ) );
+		register_setting( $this->rectags, $this->option_name . '_day', 'intval' );
+	}
+
+	public function rectags_general_cb() {
+		echo '<p>' . __( 'Please change the settings accordingly.', 'rectags' ) . '</p>';
+	}
+
+	public function rectags_position_cb() {
+		?>
+			<fieldset>
+				<label>
+					<input type="radio" name="<?php echo $this->option_name . '_position' ?>" id="<?php echo $this->option_name . '_position' ?>" value="before">
+					<?php _e( 'Before the content', 'rectags' ); ?>
+				</label>
+				<br>
+				<label>
+					<input type="radio" name="<?php echo $this->option_name . '_position' ?>" value="after">
+					<?php _e( 'After the content', 'rectags' ); ?>
+				</label>
+			</fieldset>
+		<?php
+	}
+
+	public function rectags_day_cb() {
+		echo '<input type="text" name="' . $this->option_name . '_day' . '" id="' . $this->option_name . '_day' . '"> '. __( 'days', 'rectags' );
+	}
+
+	public function rectags_sanitize_position( $position ) {
+		if ( in_array( $position, array( 'before', 'after' ), true ) ) {
+	        return $position;
+	    }
 	}
 
 }

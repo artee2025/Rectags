@@ -112,7 +112,7 @@ class Rectags_Public {
 		// var_dump($tags);
 		if (is_array($tags)) {
 			foreach ($tags as $tag) {
-				array_push($data['children'], ['name' => $tag->name . '(' . $tag->count . ')', 'size' => $tag->count]);
+				array_push($data['children'], ['name' => $tag->name, 'size' => $tag->count]);
 			}
 		}
 

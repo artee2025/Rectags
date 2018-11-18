@@ -11,15 +11,20 @@
  * @package    Rectags
  * @subpackage Rectags/admin/partials
  */
+
+var_dump(get_option( $this->option_name . '_position' ));
+var_dump(get_option( $this->option_name . '_day' ));
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
 <div class="wrap">
-<h1>Plugin "Rectags" setting</h1>
-<input type="text"><br>
-<input type="text"><br>
-<input type="text"><br>
-<input type="text"><br>
-<input type="submit" value="SAVE">
+	    <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
+	    <form action="options.php" method="post">
+	        <?php
+	            settings_fields( $this->rectags );
+	            do_settings_sections( $this->rectags );
+	            submit_button();
+	        ?>
+	    </form>
 </div>
